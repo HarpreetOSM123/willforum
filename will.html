@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Will Forum</title>
+</head>
+<style>
+    /* Reset default margin and padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Poppins;
+    }
+    
+    /* Basic styling for body */
+    
+    
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 10px 20px;
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+    }
+    
+    .navbar .logo a {
+      color: black;
+      text-decoration: none;
+      font-size: 24px;
+    }
+    
+    /* Style for navigation links (desktop view) */
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 0px;
+      justify-content: center;
+      width: 100%;
+      margin-top: -30px;
+      font-weight: 500;
+    }
+    
+    .nav-links li a {
+      color: black;
+      text-decoration: none;
+      padding: 10px 15px;
+      transition: background-color 0.3s;
+    }
+    
+    .nav-links li a:hover {
+      background-color: #f0f0f0;
+    }
+    
+    /* Hamburger icon (menu-toggle) styling */
+    .menu-toggle {
+      display: none;
+      cursor: pointer;
+      flex-direction: column;
+      gap: 5px;
+    }
+    
+    .menu-toggle .bar {
+      width: 25px;
+      height: 4px;
+      background-color: black;
+      border-radius: 2px;
+    }
+    
+    h1{
+      font-size: 36px;
+      font-weight: 600;
+    }
+    
+    .lead {
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+    
+    ul {
+        line-height: 2rem;
+    }
+    
+    ul li{
+      font-size: 18px;
+    }
+    /* Mobile view adjustments */
+    @media screen and (max-width: 768px) {
+      .navbar{
+        align-items: center;
+      }
+      .nav-links {
+        display: none; /* Hide menu by default */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+        align-items: center;
+      }
+      .image-banner{
+        display: none;
+      }
+      .nav-links li {
+        width: 100%;
+        text-align: center;
+      }
+    
+      .nav-links li a {
+        padding: 15px 0;
+        width: 100%;
+        display: block;
+      }
+    
+      .menu-toggle {
+        display: flex; /* Show the toggle button on mobile */
+      }
+    
+      /* When menu is active, show the nav links */
+      .nav-links.active {
+        display: flex;
+      }
+      .span_class{
+        display: none;
+    
+      }
+      img.image-1 {
+        width: 60%;
+    }
+    }
+</style>
+
+<body>
+    <header>
+        <nav class="navbar">
+
+            <div class="logo col-lg-4">
+                <img src="images/logo.jpg" alt="image" class="image-1">
+            </div>
+            <div class="col-lg-8">
+                <img src="images/will_band_2024.png" alt="image" class="image-banner" style="align-items: center;">
+            </div>
+
+            <!-- Toggle Button (Hamburger Menu) -->
+            <div class="menu-toggle" id="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <!-- Navigation Links -->
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#">Home</a><span class="span_class">|</span></li>
+                <li><a href="#">Vision</a><span class="span_class">|</span></li>
+                <li><a href="#">Program & Service</a><span class="span_class">|</span></li>
+                <li><a href="#">Web Mentoring</a><span class="span_class">|</span></li>
+                <li><a href="#">Conferences</a><span class="span_class">|</span></li>
+                <li><a href="#">Membership</a><span class="span_class">|</span></li>
+                <li><a href="#">Leadership</a><span class="span_class">|</span></li>
+                <li><a href="#">BENCHMARK</a><span class="span_class">|</span></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div style="margin-top: 140px;">
+        <img src="images/10.png" class="img-fluid" alt="Banner Image">
+    </div>
+    <!-- About 1 - Bootstrap Brain Component -->
+    <section class="py-3 py-md-5">
+        <div class="container">
+            <div class="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
+
+                <div class="col-12 col-lg-6 col-xl-12">
+                    <div class="row">
+                        <div class="col-12 col-xl-11">
+                            <h1 class="mb-3">Welcome to WILL Advance Lifetime Membership !</h1>
+                            <p class="lead mb-3" style="font-weight: 400;">As the world evolves, the role of women in shaping a sustainable and equitable future has never been more critical. At WILL Forum, our focus for 2025 is empowering accomplished women to lead transformative change across key
+                                areas:
+                            </p>
+                            <div class="row gy-4 gy-md-0 gx-xxl-5X" style="margin-top: 30px;">
+                                <div class="col-12 col-md-6">
+                                    <div class="d-flex">
+                                        <div class="me-4 text-primary">
+                                            <img src="images/check.png" alt="">
+                                        </div>
+                                        <div>
+                                            <h2 class="h4 mb-3">Leadership and Corporate Governance</h2>
+                                            <p class=" mb-0">Women are redefining leadership and governance with integrity, vision, and purpose.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="d-flex">
+                                        <div class="me-4 text-primary">
+                                            <img src="images/check.png" alt="">
+
+                                        </div>
+                                        <div>
+                                            <h2 class="h4 mb-3">Nature and Climate</h2>
+                                            <p class=" mb-0">Addressing sustainability and driving impactful solutions for a greener, more resilient future.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row gy-4 gy-md-0 gx-xxl-5X" style="margin-top: 30px;">
+                                <div class="col-12 col-md-6">
+                                    <div class="d-flex">
+                                        <div class="me-4 text-primary">
+                                            <img src="images/check.png" alt="">
+
+                                        </div>
+                                        <div>
+                                            <h2 class="h4 mb-3">Well-being and Workplace Wellness</h2>
+                                            <p class=" mb-0"> Leading the way in fostering environments that prioritise mental health and holistic growth.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="d-flex">
+                                        <div class="me-4 text-primary">
+                                            <img src="images/check.png" alt="">
+
+                                        </div>
+                                        <div>
+                                            <h2 class="h4 mb-3">Artificial Intelligence (AI)</h2>
+                                            <p class=" mb-0">Empowering women to lead in AI and emerging technologies, shaping innovation for the greater good.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row gy-4 gy-md-0 gx-xxl-5X" style="margin-top: 30px;">
+                                <div class="col-12 col-md-6">
+                                    <div class="d-flex">
+                                        <div class="me-4 text-primary">
+                                            <img src="images/check.png" alt="">
+
+                                        </div>
+                                        <div>
+                                            <h2 class="h4 mb-3">Shared Humanity</h2>
+                                            <p class=" mb-0"> Bridging gaps and fostering collaboration to build a more inclusive and balanced world.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About 4 - Bootstrap Brain Component -->
+    <section class="py-3  py-xl-8">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-10 col-lg-12">
+                    <!-- <h3 class="fs-5 mb-2 text-secondary text-uppercase">About</h3> -->
+                    <h2 class="display-5 mb-4" style="color:#6f078c; font-weight: 500;">Join the WILL Advance Lifetime Membership</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row gy-3 gy-md-4 gy-lg-0">
+                <div class="col-12 col-lg-12">
+                    <div class="card p-3 m-0" style="background-color: #d9d9d9;">
+                        <div class="row gy-3 gy-md-0 align-items-md-center">
+                            <div class="col-md-5" style="text-align: center;">
+                                <img src="images/11.png" class="img-fluid rounded-start" alt="Why Choose Us?" style="max-width: 70%;">
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card-body p-0">
+                                    <h2 class="h4 mb-3">Why Choose Us?</h2>
+                                    <!-- <p class="card-text lead">With years of experience and deep industry knowledge, we have a proven track record of success and are pushing ourselves to stay ahead of the curve.</p> -->
+                                    <p class="lead">An Advance Lifetime Membership offers unparalleled opportunities to lead, connect, and inspire: </p>
+                                    <ul>
+                                        <li><b>Speak at Leadership Forums Events:</b> Share your expertise as a speaker at our sessions, roundtables, and panel discussions.
+                                        </li>
+                                        <li>
+                                            <b>Complimentary Access to Corporate
+Governance Rondtable:</b> Enjoy complimentary attendance at our Corporate Governance Roundtable to engage in critical discussions shaping the future of governance.
+
+                                        </li>
+                                        <li>
+                                            <b> Complimentary WILL Board Certification
+Online:</b> Enhance your credentials with our prestigious online board certification program.
+
+                                        </li>
+                                        <li>
+                                            <b> Drive the Agenda: </b>Be at the forefront of driving initiatives that promote leadership, sustainability, and innovation.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-3  py-xl-8">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-10 col-lg-12">
+                    <p class="lead">This is your opportunity to take your leadership journey to new heights, collaborate with like-minded
+                        leaders, and contribute to shaping the future of governance, sustainability, and innovation.
+                        </p>
+                        <p class="lead">Join us as a Lifetime Member and make your mark on a future that is inclusive, impactful, and inspiring. 
+                        </p>
+                </div>
+            </div>
+        </div>
+        
+    </section>  
+    
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
+
+<script>
+    // Get the toggle button and the nav links
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    
+    // Add click event listener to the toggle button
+    menuToggle.addEventListener('click', function() {
+      // Toggle the 'active' class on the navigation links
+      navLinks.classList.toggle('active');
+    });
+</script>
